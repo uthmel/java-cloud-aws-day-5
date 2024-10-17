@@ -18,7 +18,7 @@ aws sns create-topic --name {studentName}OrderCreatedTopic
 ```
 If successful, you will see in your terminal a JSON response that includes `"TopicArn": "...`.
 
-Replace `_topicArn` in your Controller code with the generated `TopicArn` value from above.
+Replace `topicArn` in your Controller code with the generated `TopicArn` value from above.
 
 2. Create an SQS Queue:
 
@@ -28,7 +28,7 @@ aws sqs create-queue --queue-name {studentName}OrderQueue
 
 If successful, you will see in your terminal a JSON response that includes `"QueueUrl": "some_aws_url`.
 
-Replace `_queueUrl` in your Controller code with the generated `QueueUrl` from the above command.
+Replace `queueUrl` in your Controller code with the generated `QueueUrl` from the above command.
 
 
 ```bash
