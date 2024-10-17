@@ -71,9 +71,14 @@ aws sqs set-queue-attributes --queue-url https://sqs.{region}.amazonaws.com/6374
 ```
 
 ## Core Exercise
-1. Create a few orders using a RDS database. Orders to be saved in Database.
-2. Update Process flag to false
-3. Process orders and update the Total amount from QTY * AMOUNT
-4. Update Process flag to true
+
+Get the existing code working. 
 
 ## Extension Exercise
+
+It works to an extent but there are limits and bugs, for instance it doensn't interact with the database.
+
+1. Make the application store data into the database (this could be an RDS one or a Neon one)
+2. Process orders and update the Total amount from QTY * AMOUNT plus
+3. Add code to make it possible to update the existing orders in the database and remove the processed ones from the message queue
+4. Improve the code in other ways
